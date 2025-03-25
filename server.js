@@ -9,9 +9,14 @@ app.get('/api/version', (req, res) => {
   res.json({ version: '1.0.0' });
 });
 
-app.get('/api/candido-lfarias', (req, res) => {
+app.get('/api/rafael-6585019', async (req, res) => {
 	
-  res.json({ version: '1.0.0' });
+  const fs = require('fs').promises;
+  const data =await fs.readFile('rafael.txt','utf-8')
+
+  console.log(data)
+  
+  res.json({ data });
 });
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
