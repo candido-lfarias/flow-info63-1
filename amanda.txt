@@ -1,0 +1,4 @@
+{
+    nome:"Amanda Plentz"
+    turma:"Info 631
+}
