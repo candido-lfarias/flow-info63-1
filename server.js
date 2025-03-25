@@ -13,6 +13,15 @@ app.get('/api/candido-lfarias', (req, res) => {
 	
   res.json({ version: '1.0.0' });
 });
+
+app.get('/otavio-wmarques', async (req, res) => {
+	const fs = require('fs').promises; 
+  const data = await fs.readFile('otavio.txt', 'utf-8'); 
+  console.log(data); 
+
+  res.json({data});
+});
+
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
