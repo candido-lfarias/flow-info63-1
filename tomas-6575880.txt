@@ -1,0 +1,1 @@
+{nome: Tomas Agustin Rauch, turma: "Info 63-1"}
