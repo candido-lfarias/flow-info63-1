@@ -18,8 +18,9 @@ app.get('/api/candido-lfarias', (req, res) => {
 	
   const fs = require('fs').promises;
   const data = await fs.readFile('heitor-4465564.txt', 'utf8');
-  console.log(data);
-  res.json(data);
+  const obj = await JSON.stringify(data)
+  console.log(obj);
+  res.json(obj);
 
 });
 app.listen(port, () => {
